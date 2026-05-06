@@ -56,3 +56,5 @@ foreach ($pathPattern in $knownPaths) {
 }
 
 forge test
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-escrow-kit-detail.ps1
