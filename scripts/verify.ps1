@@ -58,3 +58,13 @@ foreach ($pathPattern in $knownPaths) {
 forge test
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-escrow-kit-detail.ps1
+
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-escrow-kit-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-escrow-kit-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
